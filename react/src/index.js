@@ -21,9 +21,10 @@
  * @license    {@link http://www.gnu.org/licenses/gpl-3.0.html} GNU GPL v3 or later
  */
 import React, { Component } from 'react';
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import {GeneratorView} from "./views/Views";
 import {$glVars} from "./common/common";
+import { Options } from './common/Options';
  
 class App extends Component {
     static defaultProps = {
@@ -52,5 +53,7 @@ class App extends Component {
 
 window.openRecitAutolinkUI = function(classHandler){ 
     const domContainer = document.getElementById('recitautolink_container');
-    ReactDOM.render(<App classHandler={classHandler}/>, domContainer);
+    const root = createRoot(domContainer);
+    root.render(<App classHandler={classHandler}/>);
+    console.log(Options.appVersion());
 };
