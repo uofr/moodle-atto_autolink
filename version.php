@@ -16,20 +16,20 @@
 
 /**
  * This plugin is an interface for filter_recitautolink
- *
- * @package    atto_recitautolink
+ * 
+ * @package    atto_recitautolink 
  * @copyright  2019 RECIT
  * @license    {@link http://www.gnu.org/licenses/gpl-3.0.html} GNU GPL v3 or later
  */
  
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2023013101;        // The current plugin version (Date: YYYYMMDDXX).
+$plugin->version   = 2024072500;        // The current plugin version (Date: YYYYMMDDXX).
 $plugin->requires  = 2020061500.00; // Moodle 3.9.0
 $plugin->component = 'atto_recitautolink';  // Full name of the plugin (used for diagnostics).
-$plugin->release = 'v1.17.3-stable';
-$plugin->supported = [39, 410];      //  Moodle 3.9.x, 3.10.x and 3.11.x are supported.  
+$plugin->release = 'v1.19.1-stable';
+$plugin->supported = [39, 405];      //  Moodle 3.9.x, 3.10.x and 3.11.x are supported.  
 $plugin->dependencies = [
-	'filter_recitactivity' => 2023013100
+	'filter_recitactivity' => 2024052900
 ];
 $plugin->maturity = MATURITY_STABLE; // MATURITY_ALPHA, MATURITY_BETA, MATURITY_RC or MATURITY_STABLE
