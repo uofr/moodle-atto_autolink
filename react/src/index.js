@@ -20,27 +20,26 @@
  * @copyright  2019 RECIT
  * @license    {@link http://www.gnu.org/licenses/gpl-3.0.html} GNU GPL v3 or later
  */
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
 import { createRoot } from 'react-dom/client';
-import {GeneratorView} from "./views/Views";
 import {$glVars} from "./common/common";
-import { Options } from './common/Options';
+import { MainView } from './views/MainView';
  
-class App extends Component {
+class App extends Component { 
     static defaultProps = {
-        classHandler: null
+        classHandler: null,
     };
 
     constructor(props) {
         super(props);
 
+        this.onClose = this.onClose.bind(this);
+
         $glVars.classHandler = props.classHandler;
-        this.state = {};
     }
 
     render() {       
-        let main =
-            <GeneratorView onClose={this.onClose}/>
+        let main = <MainView onClose={this.onClose}/>
 
         return (main);
     }
@@ -48,12 +47,11 @@ class App extends Component {
     onClose(val){
         $glVars.classHandler.close(val);
     }
-
 }
 
-window.openRecitAutolinkUI = function(classHandler){ 
+window.openRecitAutolinkUI = function(classHandler){  
     const domContainer = document.getElementById('recitautolink_container');
     const root = createRoot(domContainer);
     root.render(<App classHandler={classHandler}/>);
-    console.log(Options.appVersion());
+    return root;
 };

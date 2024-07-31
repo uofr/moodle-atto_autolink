@@ -21,12 +21,12 @@
  * @license    {@link http://www.gnu.org/licenses/gpl-3.0.html} GNU GPL v3 or later
  */
 import {WebApi, JsNx} from '../libs/utils/Utils';
-import { Options } from './Options';
+import { AppOptions } from './Options';
 
 export class AppWebApi extends WebApi
 {    
     constructor(){
-        super(Options.getGateway());
+        super(AppOptions.getGateway());
                 
         this.http.useCORS = true;
         this.sid = 0;
@@ -65,6 +65,10 @@ export class AppWebApi extends WebApi
 
     getH5PList(cId, onSuccess){
         this.queryMoodle('atto_recitautolink_get_h5p_list', {courseid: parseInt(cId)}, onSuccess);
+    }
+
+    getRoleList(cId, onSuccess){
+        this.queryMoodle('atto_recitautolink_get_role_list', {courseid: parseInt(cId)}, onSuccess);
     }
 
 };
