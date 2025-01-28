@@ -23,6 +23,7 @@ $string['qrcode'] = 'QR Code';
 $string['qrcode100'] = 'QR Code (flexible width)';
 $string['resourceaccess'] = 'Only resources you have access will be listed';
 $string['icon'] = 'Icon';
+$string['urlonly'] = 'URL only';
 $string['button'] = 'Button';
 $string['section'] = 'Section';
 $string['information'] = 'Informations';

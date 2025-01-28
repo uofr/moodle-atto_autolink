@@ -59,6 +59,7 @@ function atto_recitautolink_strings_for_js() {
                                             'sametab',
                                             'newtab',
                                             'h5p',
+                                            'urlonly',
                                             'course',
                                             'fullname',
                                             'shortname',
