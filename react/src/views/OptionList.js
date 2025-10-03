@@ -124,6 +124,17 @@ export const Options = [
                 }
             },
             {
+                name: 'otheroptions',
+                input: 'checkbox',
+                label: M.util.get_string('urlonly', 'atto_recitautolink'),
+                key: 'urlonly',
+                getOption: function(input){
+                    if (input.checked){
+                        return "/url";
+                    }
+                }
+            },
+            {
                 input: 'separator',
             },
             {
